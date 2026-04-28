@@ -24,12 +24,9 @@ unit_price DECIMAL(8, 2) NOT NULL CHECK (unit_price > 0)
 );
 
 INSERT INTO customers (name, email) VALUES
-('Alice Johnson', 'alice@example.com
-'),
-('Bob Smith', 'bob@example.com
-'),
-('Charlie Brown', 'charlie@example.com
-');
+('Alice Johnson', 'alice@example.com'),
+('Bob Smith', 'bob@example.com'),
+('Charlie Brown', 'charlie@example.com');
 
 INSERT INTO orders (customer_id, order_date, total) VALUES
 (1, '2023-10-01', 150.00),

@@ -2,8 +2,7 @@ BEGIN;
 
 WITH new_customer AS (
 INSERT INTO customers (name, email)
-VALUES ('Diana Prince', 'diana@example.com
-')
+VALUES ('Diana Prince', 'diana@example.com')
 RETURNING id
 ),
 new_order AS (
@@ -31,6 +30,5 @@ oi.unit_price
 FROM customers c
 JOIN orders o ON o.customer_id = c.id
 JOIN order_items oi ON oi.order_id = o.id
-WHERE c.email = 'diana@example.com
-'
+WHERE c.email = 'diana@example.com'
 ORDER BY o.id, oi.id;
